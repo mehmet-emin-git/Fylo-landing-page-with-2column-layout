@@ -37,7 +37,7 @@ p {
 .btn {
   border: 1px solid #3065f8;
   background-color: #3065f8;
-  border-radius: 2px;
+  border-radius: 7px;
   outline: none;
   color: white;
   padding: 1rem;
@@ -66,7 +66,7 @@ form input {
   border: 1px solid #585989;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 1rem;
   outline: none;
   -webkit-box-flex: 0.7;
@@ -199,16 +199,11 @@ header .flex .content p {
 }
 
 .main .flex .left .green {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   color: #3c9f8f;
   font-size: 1.3rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-decoration: none;
   position: relative;
+  display: inline-block;
 }
 
 .main .flex .left .green::after {
@@ -222,7 +217,9 @@ header .flex .content p {
 }
 
 .main .flex .left .green img {
-  margin: 0.3rem 0 0 0.5rem;
+  position: relative;
+  left: 0;
+  top: 0.3rem;
   width: 20px;
   height: 20px;
 }
@@ -462,17 +459,271 @@ footer .flex-st .social li a {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .navigation {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .container {
+    width: 90%;
   }
-  .reverse {
+  header .flex > div:first-child {
+    margin-right: 0;
+  }
+  header .flex > div:last-child {
+    margin-left: 0;
+  }
+  header .flex .content {
+    text-align: center;
+  }
+  header .flex .content h1 {
+    margin-top: 4rem;
+  }
+  header .flex .content p {
+    font-size: 1.4rem;
+    margin: 3rem 0;
+  }
+  header .flex .content form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  header .flex .content form input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+  }
+  header .flex .content form button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 0;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+  }
+  header .flex .image img {
+    width: 85%;
+    margin-left: 3rem;
+  }
+  .main {
+    margin-top: 13rem;
+  }
+  .main::before {
+    background: url("images/bg-curve-mobile.svg") no-repeat top/cover;
+  }
+  .main .flex .left h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 5rem 0 2rem 0;
+  }
+  .main .flex .left p {
+    font-size: 1.6rem;
+    opacity: 0.6;
+  }
+  .main .flex .left .green {
+    top: 1.5rem;
+    left: 30%;
+  }
+  .main .flex .left .testimonial {
+    margin: 6rem auto 1rem auto;
+    width: 90%;
+  }
+  .main .flex .right img {
+    margin-bottom: 4rem;
+    padding-left: 0;
+  }
+  .access .container {
+    padding: 0;
+  }
+  .access .flex {
+    text-align: cener;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .access .flex .text {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .access .flex .text h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .access .flex .text p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .access .flex div {
+    width: 100%;
+  }
+  .access .flex div form {
+    margin: 2rem auto 0 auto;
+    max-width: 80%;
+  }
+  .access .flex div form input {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+  }
+  .access .flex div form button {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  footer {
+    text-align: left;
+    padding-bottom: 1rem;
+  }
+  footer .ft-logo {
+    margin-right: auto;
+    padding-left: 0;
+    width: 22rem;
+  }
+  footer p {
+    text-align: left;
+    color: white;
+  }
+  footer ul {
+    font-size: 1.8rem;
+  }
+  footer .flex-st {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer .flex-st .informations {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0;
+  }
+  footer .flex-st .informations li:not(:first-child) {
+    margin-top: 1rem;
+  }
+  footer .flex-st .informations .address .icon {
+    width: 20px;
+  }
+  footer .flex-st .informations .row {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .flex-st .informations .row p {
+    margin: 0.5rem;
+    font-size: 1.8rem;
+  }
+  footer .flex-st .informations .icon {
+    width: 50px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 2rem;
+  }
+  footer .flex-st .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin: 2.5rem 0;
+  }
+  footer .flex-st .menu li {
+    padding-top: 1.3rem;
+  }
+  footer .flex-st .social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  footer .flex-st .social li {
+    width: 50px;
+    height: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 0 1rem;
+    width: 95%;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav .logo {
+    width: 8rem;
+  }
+  header nav ul li {
+    margin: 1rem 1rem;
+  }
+  header .flex .image img {
+    margin-left: 1rem;
+  }
+  header .flex .content h1 {
+    font-size: 1.6rem;
+  }
+  header .flex .content p {
+    font-size: 1.2rem;
+  }
+  header .flex .content form input,
+  header .flex .content form button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  header .flex .content form button {
+    margin-top: 2rem;
+  }
+  .main {
+    margin-top: 8rem;
+  }
+  .main .flex > div {
+    margin: 0;
+  }
+  .main .flex .left h2 {
+    font-size: 1.2rem;
+  }
+  .main .flex .left p {
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

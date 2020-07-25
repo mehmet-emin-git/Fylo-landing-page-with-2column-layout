@@ -46,7 +46,7 @@ p {
 .btn {
   border: 1px solid $bright-blue;
   background-color: $bright-blue;
-  border-radius: 2px;
+  border-radius: 7px;
   outline: none;
   color: white;
   padding: 1rem;
@@ -70,7 +70,7 @@ form {
     border: 1px solid $desaturated-blue;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 1rem;
     outline: none;
     flex: 0.7;
@@ -174,12 +174,11 @@ header {
       }
 
       .green {
-        display: flex;
         color: $moderate-cyan;
         font-size: 1.3rem;
-        align-items: center;
         text-decoration: none;
         position: relative;
+        display: inline-block;
 
         &::after {
           content: "";
@@ -192,7 +191,9 @@ header {
         }
 
         img {
-          margin: 0.3rem 0 0 0.5rem;
+          position: relative;
+          left: 0;
+          top: 0.3rem;
           width: 20px;
           height: 20px;
         }
@@ -388,11 +389,297 @@ footer {
     flex-direction: column-reverse;
   }
 
-  .navigation {
-    flex-direction: row;
+  .container {
+    width: 90%;
   }
 
-  .reverse {
-    flex-direction: column;
+  header {
+    .flex {
+      & > div:first-child {
+        margin-right: 0;
+      }
+
+      & > div:last-child {
+        margin-left: 0;
+      }
+
+      .content {
+        text-align: center;
+
+        h1 {
+          margin-top: 4rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+          margin: 3rem 0;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          margin: 0 auto;
+
+          input {
+            flex: 1;
+            padding: 1.5rem;
+            font-size: 1.3rem;
+          }
+
+          button {
+            flex: 1;
+            margin-left: 0;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .image img {
+        width: 85%;
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  .main {
+    margin-top: 13rem;
+    &::before {
+      background: url("images/bg-curve-mobile.svg") no-repeat top / cover;
+    }
+
+    .flex {
+      .left {
+        h2 {
+          text-align: center;
+          font-size: 1.7rem;
+          margin: 5rem 0 2rem 0;
+        }
+
+        p {
+          font-size: 1.6rem;
+          opacity: 0.6;
+        }
+
+        .green {
+          top: 1.5rem;
+          left: 30%;
+        }
+
+        .testimonial {
+          margin: 6rem auto 1rem auto;
+          width: 90%;
+        }
+      }
+
+      .right {
+        img {
+          margin-bottom: 4rem;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .access {
+    .container {
+      padding: 0;
+    }
+
+    .flex {
+      text-align: cener;
+      flex-direction: column;
+
+      .text {
+        max-width: 100%;
+        margin-right: 0;
+
+        h2 {
+          font-size: 2rem;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        p {
+          text-align: center;
+          font-size: 1.5rem;
+        }
+      }
+      div {
+        width: 100%;
+        form {
+          margin: 2rem auto 0 auto;
+          max-width: 80%;
+
+          input {
+            padding: 1.5rem;
+            font-size: 1.3rem;
+          }
+
+          button {
+            margin-top: 1rem;
+            width: 100%;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: left;
+    padding-bottom: 1rem;
+
+    .ft-logo {
+      margin-right: auto;
+      padding-left: 0;
+      width: 22rem;
+    }
+
+    p {
+      text-align: left;
+      color: white;
+    }
+
+    ul {
+      font-size: 1.8rem;
+    }
+
+    .flex-st {
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .informations {
+        justify-content: flex-start;
+        padding: 0;
+
+        li:not(:first-child) {
+          margin-top: 1rem;
+        }
+
+        .address .icon {
+          width: 20px;
+        }
+
+        .row {
+          display: inline-flex;
+          align-items: center;
+
+          p {
+            margin: 0.5rem;
+            font-size: 1.8rem;
+          }
+        }
+
+        .icon {
+          width: 50px;
+          align-self: center;
+          margin-right: 2rem;
+        }
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 2.5rem 0;
+
+        li {
+          padding-top: 1.3rem;
+        }
+      }
+
+      .social {
+        flex-direction: row;
+        align-self: center;
+
+        li {
+          width: 50px;
+          height: 50px;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 0 1rem;
+    width: 95%;
+  }
+
+  header {
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .logo {
+        width: 8rem;
+      }
+
+      ul {
+        li {
+          margin: 1rem 1rem;
+        }
+      }
+    }
+
+    .flex {
+      .image {
+        img {
+          margin-left: 1rem;
+        }
+      }
+
+      .content {
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
+        form {
+          input,
+          button {
+            padding: 1rem;
+            font-size: 1rem;
+          }
+
+          button {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    margin-top: 8rem;
+
+    .flex {
+      & > div {
+        margin: 0;
+      }
+
+      .left {
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }
