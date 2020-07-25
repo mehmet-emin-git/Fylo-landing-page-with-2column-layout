@@ -40,6 +40,7 @@ h4 {
 p {
   line-height: 1.5;
   font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 .btn {
@@ -136,7 +137,7 @@ header {
   .flex {
     .content {
       h1 {
-        font-size: 2.9rem;
+        font-size: 2.6rem;
         margin-top: 0;
       }
       p {
@@ -166,11 +167,10 @@ header {
     z-index: -1;
   }
   .flex {
-    justify-content: space-between;
-
+    align-items: flex-start;
     .left {
       h2 {
-        font-size: 2.9rem;
+        font-size: 2.6rem;
       }
 
       .green {
@@ -204,10 +204,11 @@ header {
         width: 73%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-        margin-top: 3rem;
+        margin-top: 3.5rem;
 
         .quote {
           width: 27px;
+          opacity: 0.8;
         }
 
         p {
@@ -248,7 +249,9 @@ header {
 
     .right {
       img {
-        width: 85%;
+        width: 100%;
+        padding-left: 3rem;
+        margin-top: 3rem;
       }
     }
   }
