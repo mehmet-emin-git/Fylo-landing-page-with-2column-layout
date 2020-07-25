@@ -21,9 +21,9 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 95%;
   max-width: 100%;
-  padding: 1.5rem;
+  padding: 1.8rem;
   margin: 0 auto;
 }
 
@@ -36,8 +36,10 @@ h2,
 h4 {
   font-family: "Raleway", sans-serif;
 }
-.green {
-  color: $moderate-cyan;
+
+p {
+  line-height: 1.5;
+  font-size: 1.2rem;
 }
 
 .btn {
@@ -46,9 +48,9 @@ h4 {
   border-radius: 2px;
   outline: none;
   color: white;
-  padding: 0.8rem;
-  margin-left: 0.6rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-left: 1rem;
+  box-shadow: 3px 5px 10px rgba($bright-blue, 0.15);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -71,7 +73,7 @@ form {
     padding: 1rem;
     outline: none;
     flex: 0.7;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 
     &::placeholder {
       color: $light-gray;
@@ -119,26 +121,35 @@ header {
       list-style-type: none;
 
       li {
-        margin-left: 2.8rem;
+        margin-left: 3rem;
 
         a {
           color: $dark-blue;
           text-decoration: none;
           font-family: "Raleway", sans-serif;
+          font-size: 1.3rem;
         }
       }
     }
   }
 
-  // .content {
-  //   // h1 {}
-  //   // p {}
-  // }
+  .flex {
+    .content {
+      h1 {
+        font-size: 2.9rem;
+        margin-top: 0;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
 }
 
 .main {
   margin-top: 6rem;
-  padding: 3rem 0;
+  padding: 3rem 0 5rem 0;
   position: relative;
   background: $light-grayish-blue;
   z-index: 10;
@@ -154,56 +165,90 @@ header {
     width: 100%;
     z-index: -1;
   }
+  .flex {
+    justify-content: space-between;
 
-  .left {
-    h2 {
-      font-size: 2rem;
-    }
-
-    .testimonial {
-      background: white;
-      padding: 2rem;
-      width: 67%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      margin-top: 3rem;
-
-      .quote {
-        width: 25px;
+    .left {
+      h2 {
+        font-size: 2.9rem;
       }
 
-      p {
-        line-height: 1.5;
-        font-size: 0.9rem;
-        font-weight: 600;
-        column-rule-color: $dark-blue;
-        opacity: 0.75;
-        letter-spacing: 0.5px;
-      }
-
-      .user {
+      .green {
         display: flex;
+        color: $moderate-cyan;
+        font-size: 1.3rem;
         align-items: center;
-        margin-top: 1.3rem;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 13rem;
+          height: 1px;
+          background: $moderate-cyan;
+          position: absolute;
+          top: 2.2rem;
+          left: 0;
+        }
 
         img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          margin-right: 0.8rem;
+          margin: 0.3rem 0 0 0.5rem;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .testimonial {
+        background: white;
+        padding: 2rem;
+        width: 73%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-top: 3rem;
+
+        .quote {
+          width: 27px;
         }
 
-        .info {
-          h4 {
-            margin: 0;
-            font-weight: bold;
-            font-size: 1.1rem;
+        p {
+          font-size: 1.2rem;
+          letter-spacing: 0.5px;
+          font-weight: 600;
+          line-height: 1.8;
+          column-rule-color: $dark-blue;
+          opacity: 0.75;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          margin-top: 1.3rem;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 0.8rem;
           }
 
-          small {
-            font-size: 0.9rem;
+          .info {
+            h4 {
+              margin: 0;
+              font-weight: bold;
+              font-size: 1.1rem;
+            }
+
+            small {
+              font-size: 0.9rem;
+            }
           }
         }
+      }
+    }
+
+    .right {
+      img {
+        width: 85%;
       }
     }
   }
@@ -212,19 +257,139 @@ header {
 .access {
   background-color: $desaturated-blue;
   color: white;
-  padding: 2rem;
+  padding: 3rem;
 
-  form {
+  .flex {
+    justify-content: space-between;
+    align-items: center;
+
+    .text {
+      max-width: 43%;
+
+      h2 {
+        font-size: 2.3rem;
+      }
+
+      p {
+        opacity: 0.9;
+      }
+    }
+
+    form {
+      max-width: 75%;
+      flex-direction: column;
+      margin-left: auto;
+
+      input {
+        flex: 1;
+        border: none;
+      }
+
+      button {
+        margin: 1.2rem 0;
+        width: 43%;
+        padding: 1.1rem 1.5rem;
+      }
+    }
+  }
+}
+
+footer {
+  background: $dark-blue;
+  padding: 4rem 1rem 2rem 1rem;
+  color: white;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .flex > div {
+    flex: 0.3;
+  }
+
+  .flex-st {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+
+    .informations {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .row {
+        display: inline-flex;
+        align-items: center;
+
+        p {
+          margin: 0.5rem;
+        }
+
+        .icon {
+          width: 23px;
+          align-self: center;
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-left: 0;
+      flex: 0.4;
+
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+
+      li:not(:first-child) {
+        padding-top: 1.1rem;
+      }
+    }
+
+    .social {
+      li {
+        border: 1px solid white;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 1rem;
+        flex: 0.5;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column-reverse;
+  }
+
+  .navigation {
+    flex-direction: row;
+  }
+
+  .reverse {
     flex-direction: column;
-
-    input {
-      flex: 1;
-      border: none;
-    }
-
-    button {
-      margin: 1.2rem 0;
-      width: 40%;
-    }
   }
 }
