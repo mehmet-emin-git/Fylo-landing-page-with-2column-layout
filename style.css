@@ -6,5 +6,142 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  color: #070439;
+  font-size: 16px;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 1.3rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+.btn {
+  border: 1px solid #3065f8;
+  background-color: #3065f8;
+  border-radius: 2px;
+  outline: none;
+  color: white;
+  padding: 0.8rem;
+  margin-left: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease-in all;
+  transition: 0.1s ease-in all;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form input {
+  border: 1px solid #585989;
+  border-radius: 2px;
+  padding: 1rem;
+  outline: none;
+  -webkit-box-flex: 0.7;
+      -ms-flex: 0.7;
+          flex: 0.7;
+}
+
+form input:focus {
+  border-color: #585989;
+}
+
+form button {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex > div:first-child {
+  margin-right: 1.2rem;
+}
+
+.flex > div:last-child {
+  margin-left: 1.2rem;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2.8rem 0;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+
+header nav ul li {
+  margin-left: 2.8rem;
+}
+
+header nav ul li a {
+  color: #070439;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.main {
+  margin-top: 6rem;
+  padding: 3rem 0;
+  position: relative;
+  background: #f6f6fe;
+  z-index: 10;
+}
+
+.main::before {
+  content: "";
+  background: url("images/bg-curve-desktop.svg") no-repeat top center/cover;
+  position: absolute;
+  top: -4.8rem;
+  left: 0;
+  height: 5rem;
+  width: 100%;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

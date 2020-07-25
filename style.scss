@@ -1,20 +1,143 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
 
 // colors
-$Dark-blue: hsl(243, 87%, 12%);
+$dark-blue: hsl(243, 87%, 12%);
 $desaturated-blue: hsl(238, 22%, 44%);
 $bright-blue: hsl(224, 93%, 58%);
 $moderate-cyan: hsl(170, 45%, 43%);
 $light-grayish-blue: hsl(240, 75%, 98%);
 $light-gray: hsl(0, 0%, 75%);
 
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Raleway', sans-serif;
-
+// ------------------------  global styles --------------------
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  color: $dark-blue;
+  font-size: 16px;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 1.3rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+.btn {
+  border: 1px solid $bright-blue;
+  background-color: $bright-blue;
+  border-radius: 2px;
+  outline: none;
+  color: white;
+  padding: 0.8rem;
+  margin-left: 0.6rem;
+  cursor: pointer;
+  transition: 0.1s ease-in all;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+form {
+  display: flex;
+
+  input {
+    border: 1px solid $desaturated-blue;
+    border-radius: 2px;
+    padding: 1rem;
+    outline: none;
+    flex: 0.7;
+
+    &:focus {
+      border-color: $desaturated-blue;
+    }
+  }
+
+  button {
+    flex: 0.3;
+  }
+}
+
+// ------------------------  content styles --------------------
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & > div {
+    flex: 1;
+  }
+
+  & > div:first-child {
+    margin-right: 1.2rem;
+  }
+
+  & > div:last-child {
+    margin-left: 1.2rem;
+  }
+}
+
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.8rem 0;
+
+    ul {
+      display: flex;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        margin-left: 2.8rem;
+
+        a {
+          color: $dark-blue;
+          text-decoration: none;
+          font-family: "Raleway", sans-serif;
+        }
+      }
+    }
+  }
+
+  .content {
+    // h1 {}
+    // p {}
+  }
+}
+
+.main {
+  margin-top: 6rem;
+  padding: 3rem 0;
+  position: relative;
+  background: $light-grayish-blue;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    background: url("images/bg-curve-desktop.svg") no-repeat top center / cover;
+
+    position: absolute;
+    top: -4.8rem;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    z-index: -1;
+  }
 }
