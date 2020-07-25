@@ -14,7 +14,7 @@ body {
 .container {
   width: 1200px;
   max-width: 100%;
-  padding: 1.3rem;
+  padding: 1.5rem;
   margin: 0 auto;
 }
 
@@ -23,8 +23,13 @@ img {
 }
 
 h1,
-h2 {
+h2,
+h4 {
   font-family: "Raleway", sans-serif;
+}
+
+.green {
+  color: #3c9f8f;
 }
 
 .btn {
@@ -35,6 +40,11 @@ h2 {
   color: white;
   padding: 0.8rem;
   margin-left: 0.6rem;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   cursor: pointer;
   -webkit-transition: 0.1s ease-in all;
   transition: 0.1s ease-in all;
@@ -52,12 +62,32 @@ form {
 
 form input {
   border: 1px solid #585989;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   border-radius: 2px;
   padding: 1rem;
   outline: none;
   -webkit-box-flex: 0.7;
       -ms-flex: 0.7;
           flex: 0.7;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+form input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+form input::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+form input::placeholder {
+  color: #bfbfbf;
 }
 
 form input:focus {
@@ -143,5 +173,85 @@ header nav ul li a {
   height: 5rem;
   width: 100%;
   z-index: -1;
+}
+
+.main .left h2 {
+  font-size: 2rem;
+}
+
+.main .left .testimonial {
+  background: white;
+  padding: 2rem;
+  width: 67%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+
+.main .left .testimonial .quote {
+  width: 25px;
+}
+
+.main .left .testimonial p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  -webkit-column-rule-color: #070439;
+          column-rule-color: #070439;
+  opacity: 0.75;
+  letter-spacing: 0.5px;
+}
+
+.main .left .testimonial .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.3rem;
+}
+
+.main .left .testimonial .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+.main .left .testimonial .user .info h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.main .left .testimonial .user .info small {
+  font-size: 0.9rem;
+}
+
+.access {
+  background-color: #585989;
+  color: white;
+  padding: 2rem;
+}
+
+.access form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.access form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+}
+
+.access form button {
+  margin: 1.2rem 0;
+  width: 40%;
 }
 /*# sourceMappingURL=style.css.map */
