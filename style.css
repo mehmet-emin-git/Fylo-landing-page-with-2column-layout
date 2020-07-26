@@ -725,5 +725,60 @@ footer .flex-st .social li a {
   .main .flex .left p {
     font-size: 1.2rem;
   }
+  .main .flex .left .green {
+    top: 1.5rem;
+    left: 20%;
+  }
+  .main .flex .left .testimonial {
+    margin: 6rem auto 0.5rem auto;
+    width: 95%;
+    padding: 1rem;
+  }
+  .main .flex .left .testimonial p {
+    font-size: 1rem;
+  }
+  .access {
+    padding: 1rem;
+  }
+  .access .flex .text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .access .flex .text p {
+    font-size: 1.2rem;
+  }
+  .access .flex div {
+    margin: 0 auto;
+  }
+  .access .flex div form {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .access .flex div form input {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .access .flex div form button {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+  footer .ft-logo {
+    width: 11rem;
+  }
+  footer ul {
+    font-size: 1.2rem;
+  }
+  footer .flex-st .informations .row p {
+    font-size: 1.2rem;
+  }
+  footer .flex-st .menu li {
+    padding-top: 1.5rem;
+  }
+  footer .flex-st .social li {
+    width: 30px;
+    height: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
